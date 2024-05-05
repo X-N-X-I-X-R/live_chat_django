@@ -1,13 +1,4 @@
-# live_chat_django
 
--  run the project
->  daphne ChatApp.asgi:application
-> redis-server --port 6380  
-
-
-#  if have any issue kill and find  the open ports  with linux command 
-> lsof -i :<port> 
-> kill -9 <Prcessid>
 
 
 # Roadmap --> How to create a chat application using Django Channels and Redis 
@@ -52,3 +43,16 @@ It enables an application server to communicate with a web server, and vice vers
 -  consumers.py is used to define the consumers for the Django Channels application.
 -  Consumers are classes that handle WebSocket connections and messages, and can be used to implement chat functionality, real-time updates, and more.
 
+
+
+
+# RUN the project 
+
+-  run the project
+>  daphne ChatApp.asgi:application
+> redis-server --port 6380  
+
+
+#  if have any issue kill and find  the open ports  with linux command 
+> lsof -i :<port> 
+> kill -9 <Prcessid>

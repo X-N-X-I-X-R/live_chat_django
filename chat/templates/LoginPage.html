@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login_view' %}">
+        {% csrf_token %}  
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <h2>Register</h2>
+    <form method="post" action="{% url 'register-page' %}">
+        {% csrf_token %}  
+        <label for="register_username">Username:</label><br>
+        <input type="text" id="register_username" name="username"><br>
+        <label for="register_password">Password:</label><br>
+        <input type="password" id="register_password" name="password"><br>
+         <input type="submit" value="Register">
+     </form>
+  
+    <script>
+        const username = sessionStorage.getItem('username');  
+        const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/chat/room_name/");
+
+
+    </script>
+</body>
+</html>

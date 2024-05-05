@@ -14,3 +14,6 @@ application = ProtocolTypeRouter({
     )
   ),
 })
+
+
+#daphne ChatApp.asgi:application    
